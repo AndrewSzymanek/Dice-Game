@@ -14,20 +14,25 @@ function climbMtEverest(){
     let outcomesHealth = [-10, +5, -30, -20, +10, -20, -40, -100]; 
     let outcome = ["Continue but low on food", "Received care package", "Illness", "Injury", "Rested-continue on!", "Frostbite", "Losing stamina", "Avalanche"]
     alert("Your goal is to climb Mt. Everest to its summit to win. Your first step is to trek in to base camp. Click OK to roll dice and determine your success. As long as your health is over 0, you will reach the summit.")
-    let climbStage = ["TrekIn", "BaseCamp", "Camp1" , "Camp2", "Camp3", "SummitFinalBid"];
+    let climbStage = ["Trek In", "Base Camp", "Camp 1" , "Camp 2", "Camp 3", "Summit Final Bid"];
     for(let i = 3; i <= 8; i ++){
         let diceRoll = rollDie(i); 
-            
-            if(health <= 0){
-            alert("Try again!");
-            }
-            else if(health > 0){
-                health += outcomesHealth[diceRoll - 1];
-                
-                alert("You rolled " + diceRoll + "." + " " +  climbStage[i - 3] + "." + " " + outcome[diceRoll - 1] + "." + " " + "Current player health:" + " " + health);
-            }
-            
+        if(health <= 0){
+            health += outcomesHealth[diceRoll - 1];
+            { break; }
         }
+        else if(health > 0){
+            health += outcomesHealth[diceRoll - 1];
+            
+        alert("You rolled " + diceRoll + "." + " " + outcome[diceRoll - 1] + " " + "at" + " " +  climbStage[i - 3] + "." + " " + "Current player health:" + " " + health);
+        } 
+    }
+    if(health > 0){
+        alert("You made it to the top!");
+    }
+    else{
+        alert("Try again!")
+    } 
 }
 
 function rollDie(n){
