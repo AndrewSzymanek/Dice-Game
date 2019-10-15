@@ -8,25 +8,26 @@
 // Bonus:
 // As a user, I want to see a visual progression up a "Mountain".
 
-
+climbMtEverest()
 function climbMtEverest(){
     let health = 100;
-    let outcomesHealth = [-10, +5, -30, -100, +10, -20, -40, -100]
-    let outcome = ["Continue but low on food", "Received care package", "Continuing slower- you're ill", "You fell", "Rested-continue on!", "Frostbite", "losing stamina", "avalanche"]
-    alert("Your goal is to climb Mt. Everest to its summit to win. Your first step is to trek in to base camp. Click OK to roll the die and determine your fate.")
+    let outcomesHealth = [-10, +5, -30, -20, +10, -20, -40, -100]; 
+    let outcome = ["Continue but low on food", "Received care package", "Illness", "Injury", "Rested-continue on!", "Frostbite", "Losing stamina", "Avalanche"]
+    alert("Your goal is to climb Mt. Everest to its summit to win. Your first step is to trek in to base camp. Click OK to roll dice and determine your success. As long as your health is over 0, you will reach the summit.")
+    let climbStage = ["TrekIn", "BaseCamp", "Camp1" , "Camp2", "Camp3", "SummitFinalBid"];
     for(let i = 3; i <= 8; i ++){
         let diceRoll = rollDie(i); 
-        
+            
             if(health <= 0){
-                console.log("Try again!");
+            alert("Try again!");
             }
-                 
             else if(health > 0){
                 health += outcomesHealth[diceRoll - 1];
-                console.log("You rolled " + diceRoll + "." + " " + outcome[diceRoll - 1] + "." + " " + "Current player health:" + " " + health);
-                alert("You rolled " + diceRoll + "." + " " + outcome[diceRoll - 1] + "." + " " + "Current player health:" + " " + health);
+                
+                alert("You rolled " + diceRoll + "." + " " +  climbStage[i - 3] + "." + " " + outcome[diceRoll - 1] + "." + " " + "Current player health:" + " " + health);
             }
-    }
+            
+        }
 }
 
 function rollDie(n){
@@ -34,14 +35,8 @@ function rollDie(n){
 }
 
 
+//Play again function?
 
-// function climb(){
-//     alert("Your goal is to climb Mt. Everest to its summit to win. Your first step is to trek in to base camp. Click OK to roll the die and determine your fate.")
-
-//     let diceRoll = rollDie(3);
-//     console.log("You rolled " + diceRoll); 
- 
-// }
 
 
 
