@@ -65,7 +65,7 @@ function baseCamp(){
     if(outCome == 3){
         health -=100;
         stamina -=100;
-        document.getElementById("firstP").innerHTML = "There is an avalance warning for Base Camp. They say you must head home for safety- you can't continue to Camp 1. Health and stamina -100.";
+        document.getElementById("firstP").innerHTML = "There is an avalanche warning for Base Camp. They say you must head home for safety- you can't continue to Camp 1. Health and stamina -100.";
         document.getElementById("secondP").innerHTML = "Health =" +  " "+ health +  " " + "Stamina =" + " " + stamina;
         
     }
@@ -308,7 +308,7 @@ function endingOutcome(){
     }
     else{
         document.getElementById("firstP").innerHTML = "Yay! You made it!! Enjoy the summit. Take pictures."
-        document.getElementById("secondP").innerHTML = " "
+        document.getElementById("secondP").innerHTML = " ";
     }
     
     document.getElementById("endingOutcome").style.display = "none";
