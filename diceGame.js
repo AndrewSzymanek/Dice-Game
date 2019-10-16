@@ -15,7 +15,7 @@ function climbMtEverest(){
     let outcomesStamina = [-20, +10, -20, -10, +40, 0, -30, -100];
     let outcomesHealth = [-10, +5, -30, -20, +10, -20, -40, -100]; 
     let outcome = ["Low on food", "Received care package", "Illness", "Injury", "Rested-continue on!", "Frostbite", "Losing stamina", "Avalanche"]
-    alert("Your goal is to climb Mt. Everest to its summit to win. Your first step is to trek in to base camp. Click OK to roll dice and determine your success. As long as your health AND stamina are over 0, you will reach the summit.")
+    
     let climbStage = ["Trek In", "Base Camp", "Camp 1" , "Camp 2", "Camp 3", "Summit Final Bid"];
     for(let i = 3; i <= 8; i ++){
         let diceRoll = rollDie(i); 
@@ -35,13 +35,17 @@ function climbMtEverest(){
         console.log("You made it to the top!");
     }
     else{
-        console.log("Try again!")
+        console.log("Sorry you didn't make it- press Play Again!")
     } 
 }
 
 function rollDie(n){
     return Math.floor(Math.random() * n) + 1;
 }
+
+function refreshPage(){
+    window.location.reload();
+} 
 
 
 //Play again function?

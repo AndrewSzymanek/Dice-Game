@@ -1,4 +1,26 @@
-img{
-    width: 100%;
-    height: auto;
+body{font-family: "Lora", serif;
+    background-color: #edf2fa;
+
 }
+
+#mountainImg{
+    text-align: center;
+    margin: auto;
+    width: auto;
+    height: auto;
+    border: 
+}
+
+p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#gameTitle{
+    text-align: center;
+}
+#buttons{text-align: center;
+    font-family: "Lora", serif;
+
+}
+    
