@@ -8,18 +8,14 @@ body{font-family: "Lora", serif;
     margin: auto;
     width: auto;
     height: auto;
-    border: 
+    
 }
 
-p{
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
-#gameTitle{
-    text-align: center;
-}
-#buttons{text-align: center;
+
+
+
+#buttons{
     font-family: "Lora", serif;
 
 }
