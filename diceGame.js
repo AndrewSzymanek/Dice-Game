@@ -96,7 +96,7 @@ function camp1(){
     if(outCome == 2){
         health -=5; 
         stamina +=0;
-        document.getElementById("firstP").innerHTML = "Upon your ascension to Camp 1, you trip and hurt your ankle but make it to 21,300 ft. Health -5";
+        document.getElementById("firstP").innerHTML = "Upon your ascension to Camp 1, you trip and hurt your ankle but make it to 21,300 ft. Health -5.";
         document.getElementById("secondP").innerHTML = "Health =" +  " "+ health +  " " + "Stamina =" + " " + stamina;
         
     }
